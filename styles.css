@@ -30,7 +30,7 @@ li {
 }
 
 li a:hover {
-   color: blue;
+   color: darkblue;
 }
 
 about, projects, contact {
@@ -40,7 +40,7 @@ about, projects, contact {
 }
 
 footer {
-   font-size: 0.8rem;
+   font-size: 0.75rem;
    text-align: center;
    color: white;
    background-color: slategray;
