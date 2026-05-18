@@ -30,7 +30,7 @@ nav ul {
 
 /* Navigation items */
 nav ul li {
-   border-right: 5px solid black;
+   border: 5px solid black;
 }
 
 /* Link Hovering Effect */
