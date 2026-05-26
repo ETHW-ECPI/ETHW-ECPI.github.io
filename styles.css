@@ -77,7 +77,7 @@ th {
    border: 2px dashed rgb(31, 34, 46);
 }
 #about:hover {
-   transform: scale(1.08);
+   transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -85,7 +85,7 @@ th {
    border: 2px dashed darkblue;
 }
 #projects:hover {
-   transform: scale(1.08);
+   transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -93,6 +93,6 @@ th {
    border: 2px dashed darkblue;
 }
 #contact:hover {
-   transform: scale(1.08);
+   transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
