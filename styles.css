@@ -36,6 +36,12 @@ nav ul {
 /* Navigation items */
 nav ul li {
    border: 1px solid black;
+   margin-right: 20px;
+}
+
+nav ul li a {
+  padding: 12px 14px;
+  display: block;
 }
 
 /* Link Hovering Effect */
@@ -74,25 +80,24 @@ th {
 
 #about {
    border: 2px dashed darkblue;
-   transition: transform 0.4s ease, box-shadow 0.4s ease;
-   transform: scale(1);
-   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+#about:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 #projects {
    border: 2px dashed darkblue;
-   transition: transform 0.4s ease, box-shadow 0.4s ease;
-   transform: scale(1);
-   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+#projects:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 #contact {
    border: 2px dashed darkblue;
-   transition: transform 0.4s ease, box-shadow 0.4s ease;
-   transform: scale(1);
-   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
-#about, #projects, #contact:hover {
+#contact:hover {
    transform: scale(1.05);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
