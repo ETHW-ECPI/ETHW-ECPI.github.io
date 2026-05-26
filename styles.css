@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*
    Author: ETHW-ECPI
    Date:   5/26/2026
@@ -18,12 +17,16 @@ header {
    font-size: 12px;
    font-weight: normal;
    padding: 10px;
-   background-color: gray;
+   background-color: rgb(225, 226, 243);
 }
 
-nav {
-   display: flex;
-   gap: 1rem;
+body > header > nav.horizontalNavigation li {
+   width: 20%;
+}
+
+nav.horizontalNavigation li {
+   display: block;
+   float: left;
 }
 
 /* Navigation List */
@@ -39,18 +42,9 @@ nav ul li {
    margin-right: 20px;
 }
 
-nav ul li:last-child {
-   margin-right: 0;
-}
-
-nav ul li a {
-  padding: 12px 14px;
-  display: block;
-}
-
 /* Link Hovering Effect */
 nav ul li a:hover {
-   background-color: gray;
+   background-color: rgb(209, 208, 208);
    transition: background-color 0.5s ease;
    transform: scale(1.02)
 }
@@ -75,15 +69,15 @@ th, td {
 }
 
 th {
-    background-color: ivory;
+    background-color: rgb(228, 228, 228);
     font-weight: bold;
 }
 
 #about {
-   border: 2px dashed darkblue;
+   border: 2px dashed rgb(31, 34, 46);
 }
 #about:hover {
-   transform: scale(1);
+   transform: scale(1.08);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -91,7 +85,7 @@ th {
    border: 2px dashed darkblue;
 }
 #projects:hover {
-   transform: scale(1);
+   transform: scale(1.08);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -99,6 +93,6 @@ th {
    border: 2px dashed darkblue;
 }
 #contact:hover {
-   transform: scale(1);
+   transform: scale(1.08);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
