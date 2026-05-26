@@ -59,7 +59,7 @@ table {
 }
 
 th, td {
-    border: 2px solid blue;
+    border: 2px solid slategray;
     padding: 10px;
     text-align: left;
 }
