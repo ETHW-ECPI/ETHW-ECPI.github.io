@@ -2,7 +2,7 @@
 
 /*
    Author: ETHW-ECPI
-   Date:   5/18/2026
+   Date:   5/26/2026
    
    Filename: styles.css
 */
@@ -27,29 +27,29 @@ nav {
 }
 
 /* Navigation List */
-nav ul {
+nav-list {
    list-style: none;
    margin: 0;
    padding: 0;
 }
 
 /* Navigation items */
-nav ul li {
+nav-list li {
    border: 1px solid black;
    margin-right: 20px;
 }
 
-.nav ul li:last-child {
+.nav-list li:last-child {
    margin-right: 0;
 }
 
-nav ul li a {
+nav-list li a {
   padding: 12px 14px;
   display: block;
 }
 
 /* Link Hovering Effect */
-nav ul li a:hover {
+nav-list li a:hover {
    background-color: gray;
    transition: background-color 0.5s ease;
    transform: scale(1.02)
@@ -83,7 +83,7 @@ th {
    border: 2px dashed darkblue;
 }
 #about:hover {
-   transform: scale(0.5);
+   transform: scale(0.15);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -91,7 +91,7 @@ th {
    border: 2px dashed darkblue;
 }
 #projects:hover {
-   transform: scale(0.5);
+   transform: scale(0.15);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -99,6 +99,6 @@ th {
    border: 2px dashed darkblue;
 }
 #contact:hover {
-   transform: scale(0.5);
+   transform: scale(0.15);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
