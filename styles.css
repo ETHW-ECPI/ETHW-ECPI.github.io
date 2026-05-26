@@ -36,6 +36,11 @@ nav ul li {
 /* Link Hovering Effect */
 nav ul li a:hover {
    background-color: gray;
+   transition: background-color 0.5s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
 }
 
 /* Footer */
@@ -44,4 +49,31 @@ footer {
    text-align: center;
    color: white;
    background-color: slategray;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid blue;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: ivory;
+    font-weight: bold;
+}
+
+main section {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: scale(1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+main section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
