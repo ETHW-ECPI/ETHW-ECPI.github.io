@@ -1,7 +1,8 @@
 @charset "utf-8";
+
 /*
    Author: ETHW-ECPI
-   Date:   5/26/2026
+   Date:   5/27/2026
    
    Filename: styles.css
 */
@@ -20,31 +21,32 @@ header {
    background-color: rgb(225, 226, 243);
 }
 
-body > header > nav.horizontalNavigation li {
-   width: 20%;
-}
-
-nav.horizontalNavigation li {
-   display: block;
-   float: left;
-}
-
 /* Navigation List */
 nav ul {
-   list-style: none;
+   list-style-type: none;
    margin: 0;
    padding: 0;
+   overflow: hidden;
+   background-color: whitesmoke;
 }
 
 /* Navigation items */
 nav ul li {
    border: 1px solid black;
-   margin-right: 20px;
+   float: left;
+}
+
+nav ul li a {
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
 }
 
 /* Link Hovering Effect */
 nav ul li a:hover {
-   background-color: rgb(209, 208, 208);
+   background-color: rgb(230, 227, 227);
    transition: background-color 0.5s ease;
    transform: scale(1.02)
 }
@@ -57,25 +59,10 @@ footer {
    background-color: slategray;
 }
 
-table {
-   width: 100%;
-   border-collapse: collapse;
-}
-
-th, td {
-    border: 2px solid slategray;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: rgb(228, 228, 228);
-    font-weight: bold;
-}
-
 #about {
    border: 2px dashed rgb(31, 34, 46);
 }
+
 #about:hover {
    transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -83,7 +70,25 @@ th {
 
 #projects {
    border: 2px dashed darkblue;
+
+   table {
+      width: 100%;
+      border-collapse: collapse;
+   }
+
+   th,
+   td {
+      border: 2px solid slategray;
+      padding: 10px;
+      text-align: left;
+   }
+
+   th {
+      background-color: rgb(228, 228, 228);
+      font-weight: bold;
+   }
 }
+
 #projects:hover {
    transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -92,6 +97,7 @@ th {
 #contact {
    border: 2px dashed darkblue;
 }
+
 #contact:hover {
    transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
