@@ -28,20 +28,17 @@ nav ul {
    padding: 0;
    overflow: hidden;
    background-color: whitesmoke;
+   display: flex;
 }
 
 /* Navigation items */
-nav ul li {
-   border: 1px solid black;
-   float: left;
-}
-
 nav ul li a {
    display: block;
    color: black;
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
+   border: 1px solid black;
 }
 
 /* Link Hovering Effect */
@@ -60,7 +57,8 @@ footer {
 }
 
 #about {
-   border: 2px dashed rgb(31, 34, 46);
+   border-bottom: 2px solid rgb(31, 34, 46);
+   text-align: center;
 }
 
 #about:hover {
@@ -69,24 +67,8 @@ footer {
 }
 
 #projects {
-   border: 2px dashed darkblue;
-
-   table {
-      width: 100%;
-      border-collapse: collapse;
-   }
-
-   th,
-   td {
-      border: 2px solid slategray;
-      padding: 10px;
-      text-align: left;
-   }
-
-   th {
-      background-color: rgb(228, 228, 228);
-      font-weight: bold;
-   }
+   border-bottom: 2px solid darkblue;
+   text-align: center;
 }
 
 #projects:hover {
@@ -94,8 +76,26 @@ footer {
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+th, td {
+   border: 2px solid slategray;
+   padding: 10px;
+   text-align: left;
+}
+
+th {
+   background-color: rgb(228, 228, 228);
+   font-weight: bold;
+   margin: auto;
+}
+
 #contact {
-   border: 2px dashed darkblue;
+   border-bottom: 2px solid darkblue;
+   text-align: center;
 }
 
 #contact:hover {
