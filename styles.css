@@ -62,26 +62,18 @@ footer {
    background-color: slategray;
 }
 
-#about {
+/* Section */
+section {
    border-bottom: 2px solid rgb(31, 34, 46);
    text-align: center;
 }
 
-#about:hover {
+section:hover {
    transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-#projects {
-   border-bottom: 2px solid darkblue;
-   text-align: center;
-}
-
-#projects:hover {
-   transform: scale(1.01);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
+/* Projects Table */
 table {
    width: 100%;
    border-collapse: collapse;
@@ -100,16 +92,7 @@ th {
    margin: auto;
 }
 
-#contact {
-   border-bottom: 2px solid darkblue;
-   text-align: center;
-}
-
-#contact:hover {
-   transform: scale(1.01);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
+/* Contact Form */
 .contact-form {
    display: flex;
 }
@@ -141,4 +124,18 @@ button[type="submit"]:hover {
 button[type="submit"]:focus {
    background-color: #004494;
    outline: none;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  body {
+    padding: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    padding: 40px;
+  }
 }

@@ -1,100 +1,112 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!--
+
+<head>
+  <!--
    Author: ETHW-ECPI
    Date: 6/1/2026
    Filename: index.html
    -->
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="styles.css">
-    <title></title>
-  </head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css">
+  <title></title>
+</head>
+
 <body>
- <header>
-   <h1>Welcome to my Project</h1>
- </header>
-  
+  <header>
+    <h1>Welcome to my Project</h1>
+  </header>
+
   <!-- Navigation Menu -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <!-- About link -->
       <li><a href="#projects">Projects</a></li>
-       <!-- Projects link... I wonder what would go in here -->
+      <!-- Projects link... I wonder what would go in here -->
       <li><a href="#contact">Contact</a></li>
-       <!-- Contacts link... I rather not have anything in here... I don't want random people contacting me -->
+      <!-- Contacts link... I rather not have anything in here... I don't want random people contacting me -->
     </ul>
   </nav>
 
   <main>
-    
+
     <!-- Page Content -->
-    <h2 id="about">About</h2>
-    <p>Content for About</p>
+    <section>
+      <h2 id="about">About</h2>
+      <p>Content for About</p>
+    </section>
 
-    <h2 id="projects">Projects</h2>
-    <p>Content for Projects</p>
-    <table>
-      <caption>Sample Projects</caption>
-      <colgroup>
-        <col style="background-color: lightgray"> <!-- First column -->
-        <col> <!-- Second column -->
-        <col style="background-color: lightgray"> <!-- Third column -->
-      </colgroup>
-      
-      <thead>
-      <tr>
-        <th>Project Name</th>
-        <th>Description</th>
-        <th>Image</th>
-      </tr>
-    </thead>
+    <section>
+      <h2 id="projects">Projects</h2>
+      <p>Content for Projects</p>
+      <table>
+        <caption>Sample Projects</caption>
+        <colgroup>
+          <col style="background-color: lightgray"> <!-- First column -->
+          <col> <!-- Second column -->
+          <col style="background-color: lightgray"> <!-- Third column -->
+        </colgroup>
 
-      <tbody>
-      <tr>
-        <td>Sample Project 1</td>
-        <td>Sample Project 1 Description</td>
-        <td><img src="https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg" width="100" height="100" alt="Sample Project 1"></td>
-      </tr>
-      <tr>
-        <td>Sample Project 2</td>
-        <td>Sample Project 2 Description</td>
-        <td><img src="https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg" width="100" height="100" alt="Sample Project 2"></td>
-      </tr>
-    </tbody>
-    
-    <tfoot>
-      <tr>
-        <td colspan="3">End of Project List</td>
-      </tr>
-    </tfoot>
-    </table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Image</th>
+          </tr>
+        </thead>
 
-    <h2 id="contact">Contact</h2>
-    <form class="contact-form" action="#" method="post">
-    
-    <!-- Name -->
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required placeholder="Enter your name">
-    
-    <!-- Email -->
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required placeholder="Enter your email">
-    
-    <!-- Subject -->
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" name="subject" placeholder="Enter subject">
-    
-    <!-- Message -->
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
-    
-    <!-- Submit -->
-    <input type="submit" value="Send Message">
-    
-  </form>
-    
+        <tbody>
+          <tr>
+            <td>Sample Project 1</td>
+            <td>Sample Project 1 Description</td>
+            <td><img
+                src="https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg"
+                width="100" height="100" alt="Sample Project 1"></td>
+          </tr>
+          <tr>
+            <td>Sample Project 2</td>
+            <td>Sample Project 2 Description</td>
+            <td><img
+                src="https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg"
+                width="100" height="100" alt="Sample Project 2"></td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3">End of Project List</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section>
+      <h2 id="contact">Contact</h2>
+      <form class="contact-form" action="#" method="post">
+
+        <!-- Name -->
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <!-- Subject -->
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+
+        <!-- Submit -->
+        <input type="submit" value="Send Message">
+
+      </form>
+    </section>
+
   </main>
   <footer>
     This is a bullet --> &#8226;
