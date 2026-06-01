@@ -68,7 +68,8 @@ footer {
    text-align: center;
    color: whitesmoke;
    background-color: #333;
-   max-width: 960px;
+   max-width: 720px;
+   justify-content: center;
 }
 
 /* Section */
@@ -113,12 +114,12 @@ th {
    display: flex;
    flex-direction: column;
    gap: 15px;
-   max-width: 960px;
+   max-width: 600px;
 }
 
 input,
 textarea {
-   transition: border-color 0.3s ease
+   transition: #c9c9c9 0.3s ease;
 }
 
 input:hover,
@@ -133,7 +134,7 @@ textarea:focus {
 }
 
 button[type="submit"] {
-   transition: background-color 0.3s ease
+   transition: #c9c9c9 0.3s ease;
 }
 
 button[type="submit"]:hover {
