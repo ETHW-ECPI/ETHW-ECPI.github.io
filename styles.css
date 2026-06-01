@@ -9,6 +9,8 @@
 
 /* Main */
 main {
+   max-width: 960px;
+   margin: auto;
    display: flex;
    flex-direction: column;
    gap: 10px;
@@ -26,7 +28,7 @@ header {
    font-size: 12px;
    font-weight: normal;
    padding: 10px;
-   background-color: rgb(225, 226, 243);
+   background-color: #333;
 }
 
 /* Navigation List */
