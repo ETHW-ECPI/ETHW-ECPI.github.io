@@ -71,8 +71,13 @@ footer {
 
 /* Section */
 section {
-   border-bottom: 2px solid rgb(31, 34, 46);
+   background-color: slategray;
    text-align: center;
+}
+
+#about, #projects, #contact {
+   background-color: #333;
+   color: rgb(247, 247, 247);
 }
 
 section:hover {
