@@ -2,10 +2,16 @@
 
 /*
    Author: ETHW-ECPI
-   Date:   5/27/2026
+   Date:   6/1/2026
    
    Filename: styles.css
 */
+
+/* Main */
+main {
+   display: flex;
+}
+
 /* Body */
 body {
    background-color: white;
@@ -81,7 +87,8 @@ table {
    border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
    border: 2px solid slategray;
    padding: 10px;
    text-align: left;
@@ -101,4 +108,37 @@ th {
 #contact:hover {
    transform: scale(1.01);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form {
+   display: flex;
+}
+
+input,
+textarea {
+   transition: border-color 0.3s ease
+}
+
+input:hover,
+textarea:hover {
+   border-color: #888;
+}
+
+input:focus,
+textarea:focus {
+   border-color: #007BFF;
+   outline: none;
+}
+
+button[type="submit"] {
+   transition: background-color 0.3s ease
+}
+
+button[type="submit"]:hover {
+   background-color: #0056b3;
+}
+
+button[type="submit"]:focus {
+   background-color: #004494;
+   outline: none;
 }

@@ -3,7 +3,7 @@
   <head>
     <!--
    Author: ETHW-ECPI
-   Date: 05/26/2026
+   Date: 6/1/2026
    Filename: index.html
    -->
     <meta charset="utf-8" />
@@ -72,7 +72,28 @@
     </table>
 
     <h2 id="contact">Contact</h2>
-    <p>Content for Contact</p>
+    <form class="contact-form" action="#" method="post">
+    
+    <!-- Name -->
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+    
+    <!-- Email -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+    <!-- Subject -->
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" placeholder="Enter subject">
+    
+    <!-- Message -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+    
+    <!-- Submit -->
+    <input type="submit" value="Send Message">
+    
+  </form>
     
   </main>
   <footer>
