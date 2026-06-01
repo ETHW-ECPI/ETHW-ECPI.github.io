@@ -71,6 +71,7 @@ footer {
    max-width: 720px;
    display: flex;
    justify-content: center;
+   padding: 12px 12px;
 }
 
 /* Section */
