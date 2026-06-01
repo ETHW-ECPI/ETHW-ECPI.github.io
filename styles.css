@@ -10,6 +10,8 @@
 /* Main */
 main {
    display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
 
 /* Body */
@@ -30,11 +32,14 @@ header {
 /* Navigation List */
 nav ul {
    list-style-type: none;
-   margin: 0;
-   padding: 0;
+   margin: 0px;
+   padding: 0px;
    overflow: hidden;
    background-color: whitesmoke;
+   justify-content: center;
    display: flex;
+   flex-direction: row;
+   gap: 20px;
 }
 
 /* Navigation items */
@@ -95,6 +100,8 @@ th {
 /* Contact Form */
 .contact-form {
    display: flex;
+   flex-direction: column;
+   gap: 15px;
 }
 
 input,
@@ -126,16 +133,14 @@ button[type="submit"]:focus {
    outline: none;
 }
 
+/* Mobile */
+@media only screen and (min-width: 360px) {
+}
+
 /* Tablet */
 @media (min-width: 600px) {
-  body {
-    padding: 20px;
-  }
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
-  body {
-    padding: 40px;
-  }
+@media (min-width: 768px) {
 }
