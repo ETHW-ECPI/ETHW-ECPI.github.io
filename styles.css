@@ -29,6 +29,7 @@ header {
    font-weight: normal;
    padding: 10px;
    background-color: #333;
+   color: whitesmoke;
 }
 
 /* Navigation List */
@@ -51,7 +52,7 @@ nav ul li a {
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
-   border: 1px solid black;
+   border-radius: 4px;
 }
 
 /* Link Hovering Effect */
@@ -71,13 +72,15 @@ footer {
 
 /* Section */
 section {
-   background-color: slategray;
+   background-color: white;
    text-align: center;
+   display: block;
+   border-radius: 3px;
 }
 
 #about, #projects, #contact {
    background-color: #333;
-   color: rgb(247, 247, 247);
+   color: whitesmoke;
 }
 
 section:hover {
@@ -109,6 +112,7 @@ th {
    display: flex;
    flex-direction: column;
    gap: 15px;
+   max-width: 960px;
 }
 
 input,
