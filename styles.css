@@ -69,8 +69,7 @@ footer {
    color: whitesmoke;
    background-color: #333;
    max-width: 720px;
-   display: flex;
-   justify-content: center;
+   display: block;
    padding: 12px 12px;
 }
 
@@ -78,11 +77,15 @@ footer {
 section {
    background-color: white;
    text-align: center;
-   display: block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    border-radius: 3px;
 }
 
-#about, #projects, #contact {
+#about,
+#projects,
+#contact {
    background-color: #333;
    color: whitesmoke;
 }
@@ -150,13 +153,10 @@ button[type="submit"]:focus {
 }
 
 /* Mobile */
-@media only screen and (min-width: 360px) {
-}
+@media only screen and (min-width: 360px) {}
 
 /* Tablet */
-@media (min-width: 600px) {
-}
+@media (min-width: 600px) {}
 
 /* Desktop */
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
