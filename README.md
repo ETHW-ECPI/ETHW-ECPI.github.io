@@ -1,6 +1,6 @@
 # My Amazing Website Project
 
-This is a project for my Web Design Class.
+This is a project for my Web Design Class and JavaScript Class.
 
 ## Table of Contents
 - [Installation](#installation)
