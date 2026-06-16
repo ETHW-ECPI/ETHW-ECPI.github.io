@@ -2,7 +2,7 @@
 
 /*
    Author: ETHW-ECPI
-   Date:   6/1/2026
+   Date:   6/16/2026
    
    Filename: styles.css
 */
@@ -30,6 +30,16 @@ header {
    padding: 10px;
    background-color: #333;
    color: whitesmoke;
+}
+
+/* Footer */
+footer {
+   font-size: 1rem;
+   text-align: center;
+   color: whitesmoke;
+   background-color: #333;
+   max-width: 720px;
+   padding: 10px;
 }
 
 /* Navigation List */
@@ -62,17 +72,6 @@ nav ul li a:hover {
    transform: scale(1.02)
 }
 
-/* Footer */
-footer {
-   font-size: 1rem;
-   text-align: center;
-   color: whitesmoke;
-   background-color: #333;
-   max-width: 720px;
-   display: block;
-   padding: 12px 12px;
-}
-
 /* Section */
 section {
    background-color: white;
@@ -83,9 +82,8 @@ section {
    border-radius: 3px;
 }
 
-#about,
-#projects,
-#contact {
+section>h2 {
+   text-align: center;
    background-color: #333;
    color: whitesmoke;
 }
