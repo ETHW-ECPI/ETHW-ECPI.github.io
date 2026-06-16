@@ -37,7 +37,6 @@ footer {
    text-align: center;
    font-size: 1em;
    font-weight: normal;
-   max-width: 45%;
    padding: 10px;
    background-color: #333;
    color: whitesmoke;
@@ -79,6 +78,7 @@ section {
    text-align: center;
    display: flex;
    justify-content: center;
+   align-items: center;
    flex-direction: column;
    border-radius: 3px;
 }
@@ -120,6 +120,7 @@ th {
    gap: 15px;
    max-width: 600px;
    justify-content: center;
+   align-items: center;
 }
 
 input,
