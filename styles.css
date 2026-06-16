@@ -85,8 +85,8 @@ section {
 
 section>h2 {
    text-align: center;
-   background-color: #333;
-   color: whitesmoke;
+   border-bottom: 5px solid #333;
+   color: #333;
 }
 
 section:hover {
