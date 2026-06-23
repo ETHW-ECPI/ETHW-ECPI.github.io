@@ -160,3 +160,23 @@ button[type="submit"]:focus {
 
 /* Desktop */
 @media (min-width: 768px) {}
+
+/* Dark Mode */
+.dark-mode {
+   background-color: #333;
+   color: white;
+}
+
+/* Toggle Switch */
+.switch {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}

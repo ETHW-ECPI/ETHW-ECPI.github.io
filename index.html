@@ -17,11 +17,17 @@
     <div id="name"></div>
   </header>
 
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+  </label>
+
   <!-- Navigation Menu -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <!-- About link -->
+      <li><a href="#featured">Featured Content</a></li>
+      <!-- Featured Content link -->
       <li><a href="#projects">Projects</a></li>
       <!-- Projects link... I wonder what would go in here -->
       <li><a href="#contact">Contact</a></li>
@@ -35,6 +41,14 @@
     <section>
       <h2 id="about">About</h2>
       <p>This is my webpage project for my school. It's pretty alright.</p>
+      <ul id="aboutList"></ul>
+    </section>
+
+    <section>
+      <h2 id="featured">Featured Content</h2>
+      <div id="university">University Resources</div> <!-- text links to your ECPI program home page -->
+      <div id="personal">Personal Projects</div>
+      <!-- image links to any of your personal GitHub or web-based projects -->
     </section>
 
     <section>
@@ -101,7 +115,7 @@
         <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
 
         <!-- Submit -->
-        <input type="submit" value="Send Message">
+        <input id="submit" type="submit" value="Send Message">
 
       </form>
     </section>
@@ -112,8 +126,11 @@
   </footer>
 </body>
 
-<!-- JavaScript script to get user's name-->
+<!-- JavaScript script-->
 <script>
+  // Script to get the user's name
+  // =============================
+
   // Prompt the user for their name
   var name = prompt("What is your name?");
 
@@ -122,6 +139,46 @@
 
   // Update the name element with the user's name
   document.getElementById("name").innerText = "Hello, " + name + "!";
+
+  // Script for choosing which div loads
+  // =============================
+  if (projects > 3) {
+    document.getElementById('university').style.display = 'none'
+  }
+
+  // Script for about section
+  // =============================
+
+  // Array of skills/technologies
+  const skills = ["HTML", "CSS", "C", "JavaScript", "Java"];
+
+  // Get the <ul> element by its ID
+  const skillsList = document.getElementById("aboutList");
+
+  // ForEach loop
+  skills.forEach(skills => {
+    const listItem = document.createElement("li");
+    listItem.textContent = skills;
+    skillsList.appendChild(listItem);
+  });
+
+  // Script for dark mode slider
+  // =============================
+
+  const toggle = document.getElementById("darkModeToggle");
+
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode", toggle.checked);
+  });
+
+  // Script for form submit button
+  // =============================
+
+  document.getElementById("submit").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent form from refreshing the page
+    alert("Thank you, " + name + ", your message has been sent!");
+  }, false);
+
 </script>
 
 </html>
