@@ -170,15 +170,15 @@ button[type="submit"]:focus {
 .dark-mode body {
    background-color: #333;
    color: whitesmoke;
+}
 
-   section>h2 {
-      border-bottom: 5px solid white;
-   }
+.dark-mode header,
+.dark-mode footer {
+   background-color: white;
+}
 
-   header,
-   footer {
-      background-color: white;
-   }
+.dark-mode section>h2 {
+   border-bottom: 5px solid white;
 }
 
 /* Toggle Switch */
