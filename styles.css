@@ -162,9 +162,23 @@ button[type="submit"]:focus {
 @media (min-width: 768px) {}
 
 /* Dark Mode */
-.dark-mode * {
+.dark-mode {
    background-color: #333;
-   color: white;
+   color: whitesmoke;
+}
+
+.dark-mode body {
+   background-color: #333;
+   color: whitesmoke;
+
+   section>h2 {
+      border-bottom: 5px solid white;
+   }
+
+   header,
+   footer {
+      background-color: white;
+   }
 }
 
 /* Toggle Switch */
