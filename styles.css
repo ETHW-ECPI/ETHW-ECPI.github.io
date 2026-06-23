@@ -169,14 +169,17 @@ button[type="submit"]:focus {
 
 /* Toggle Switch */
 .switch {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
+   position: relative;
+   display: inline-block;
+   width: 50px;
+   height: 24px;
 }
 
 .switch input {
-  display: none;
+   display: none;
+}
+
+.label-text {
+   margin-left: 10px;
+   font-size: 1rem;
 }
