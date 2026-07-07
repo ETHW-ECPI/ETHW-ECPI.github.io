@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <h1>Welcome to my Project</h1>
+    <h1 id="title">Welcome to my Project</h1>
     <div id="name"></div>
   </header>
 
@@ -94,7 +94,7 @@
 
     <section>
       <h2 id="contact">Contact</h2>
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" id="contact-form" action="#" method="post">
 
         <!-- Name -->
         <label for="name">Your Name:</label>
@@ -122,9 +122,7 @@
 
   <button onclick="darkMode()">Toggle dark mode</button>
 
-  <footer>
-    This is a bullet --> &#8226;
-  </footer>
+  <footer id="footer">This is a bullet --> &#8226;</footer>
 </body>
 
 <!-- JavaScript script-->
@@ -170,13 +168,62 @@
     element.classList.toggle("dark-mode");
   }
 
+  // Script for notification
+  // =============================
+
+  // Delay in milliseconds before showing the notification
+  const delay = 2000; // 2 seconds
+
+  // Function to create and show the notification
+  function showNotification(message) {
+
+    // notification element creation
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = message; // Safe here since message is controlled
+
+    // Insert at the top of the body
+    document.body.insertBefore(notification, document.body.firstChild);
+
+    // Automatically hides after 5 seconds
+    setTimeout(() => {
+      if (notification && notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 5000);
+  }
+
+  // Show notification after the delay
+  setTimeout(() => {
+    showNotification('Hello There');
+  }, delay);
+
+  // Script for modifying existing elements on the page
+  // =============================
+  const titleElement = document.getElementById("title");
+  titleElement.textContent = "Welcome to my Amazing Project";
+
+  const footerElement = document.getElementById("footer");
+  footerElement.textContent = "These are two bullets --> &#8226;&#8226;";
+
   // Script for form submit button
   // =============================
-  document.getElementById("submit").addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent form from refreshing the page
-    alert("Thank you, " + name + ", your message has been sent!");
-  }, false);
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevents form submission
 
+    const submit = document.getElementById('submit');
+
+    // Disables the submit button
+    submit.disabled = true;
+
+    alert('Message Sending...');
+
+    setTimeout(() => {
+      submit.disabled = false;
+      alert("Thank you, " + name + ", your message has been sent!");
+      this.reset();
+    }, 2000); // 2 second delay
+  })
 </script>
 
 </html>
