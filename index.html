@@ -214,14 +214,14 @@
     const submit = document.getElementById('submit');
 
     // Disables the submit button
-    //submit.disabled = true;
+    submit.disabled = true;
 
     alert('Message Sending...');
 
     setTimeout(() => {
-      //submit.disabled = false;
+      submit.disabled = false;
       alert("Thank you, " + name + ", your message has been sent!");
-      this.reset();
+      e.target.reset();
     }, 2000); // 2 second delay
   })
 </script>
