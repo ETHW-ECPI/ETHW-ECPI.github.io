@@ -17,6 +17,19 @@
     <div id="name"></div>
   </header>
 
+  <!-- Modal Structure -->
+  <h2>Modal Popup</h2>
+
+  <button id="openBtn">Open Modal</button>
+
+  <div id="modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="closeBtn" class="modal-close">×</button>
+      <h3>Hello!</h3>
+      <p>This is a modal popup.</p>
+    </div>
+  </div>
+
   <!-- Navigation Menu -->
   <nav>
     <ul>
@@ -32,15 +45,6 @@
   </nav>
 
   <main>
-
-    <!-- Modal Structure -->
-    <div id="modal" class="modal-overlay">
-      <div class="modal-content">
-        <h2>This page is a work in progress.</h2>
-        <button class="close-btn" id="closeModal">Close</button>
-      </div>
-    </div>
-
     <!-- Page Content -->
     <section>
       <h2 id="about">About</h2>
@@ -171,9 +175,6 @@
   // =============================
   (function () {
     const body = document.body;
-    const section = document.querySelector("section");
-    const header = document.querySelector("header");
-    const footer = document.querySelector("header");
     const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
 
@@ -181,25 +182,20 @@
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
-      section.classList.add('dark-mode');
-      header.classList.add('dark-mode');
-      footer.classList.add('dark-mode');
     }
 
     // Changes theme on button click
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      section.classList.toggle('dark-mode');
-      header.classList.toggle('dark-mode');
-      footer.classList.toggle('dark-mode');
+      document.getElementById("title").style.color = "#333";
+      document.getElementById("title").style.backgroundColor = "whitesmoke";
+      document.getElementById("footer").style.color = "#333";
+      document.getElementById("footer").style.backgroundColor = "whitesmoke";
 
       // Save preference
       localStorage.setItem(
         THEME_KEY,
-        body.classList.contains('dark-mode') ? 'dark' : 'light',
-        section.classList.contains('dark-mode') ? 'dark' : 'light',
-        header.classList.contains('dark-mode') ? 'dark' : 'light',
-        footer.classList.contains('dark-mode') ? 'dark' : 'light'
+        body.classList.contains('dark-mode') ? 'dark' : 'light'
       );
     });
   })();
@@ -259,36 +255,52 @@
       alert("Thank you, " + name + ", your message has been sent!");
       e.target.reset();
     }, 2000); // 2 second delay
+  });
+  // Script for Modal
+  // =============================
+  const modal = document.getElementById("modal");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
 
-    // Script for Modal
-    // =============================
-    // Show modal when page loads
-    window.onload = function () {
-      document.getElementById('modal').style.display = 'block';
-    };
+  // Show modal when page loads
+  window.onload = function () {
+    document.getElementById('modal').style.display = 'block';
+  };
 
-    // Close modal when button is clicked
-    document.getElementById('closeModal').addEventListener('click', function () {
-      document.getElementById('modal').style.display = 'none';
-    });
+  function openModal() {
+    modal.classList.add("show");
+  }
 
-    // Optional: Close modal when clicking outside the content box
-    document.getElementById('modal').addEventListener('click', function (e) {
-      if (e.target === this) {
-        this.style.display = 'none';
-      }
-    });
+  function closeModal() {
+    modal.classList.remove("show");
+  }
 
-    // Tooltip
-    // =============================
-    // Selects all desired input fields and attaches tooltips to them
-    $("#myform :input").tooltip({
-      position: "center right",
-      offset: [-2, 10],
-      effect: "fade",
-      opacity: 0.7
-    });
-  })
+  openBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  /* Close when clicking outside the modal box */
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  /* Close when pressing Escape */
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Tooltip
+  // =============================
+  // Selects all desired input fields and attaches tooltips to them
+  $("#myform :input").tooltip({
+    position: "center right",
+    offset: [-2, 10],
+    effect: "fade",
+    opacity: 0.7
+  });
 </script>
 
 </html>
