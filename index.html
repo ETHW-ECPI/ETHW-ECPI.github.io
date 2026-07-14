@@ -121,12 +121,7 @@
         <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
 
         <!-- Submit -->
-        <!--<input id="submit" type="submit" value="Send Message">-->
-
-        <div class="tooltip">
-          <span>Tooltip text</span>
-          <input id="submit" type="submit" value="Send Message">
-        </div>
+        <input id="submit" type="submit" value="Send Message" title="Sends your message to a far away land...">
 
       </form>
     </section>
@@ -185,7 +180,6 @@
     // Load saved theme from localStorage
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
-      body.classList.add('dark-mode');
       body.classList.add('dark-mode');
       //document.getElementById("pageContentSection").classList.add('dark-mode');
     }
@@ -276,6 +270,16 @@
       if (e.target === this) {
         this.style.display = 'none';
       }
+    });
+
+    // Tooltip
+    // =============================
+    // Selects all desired input fields and attaches tooltips to them
+    $("#myform :input").tooltip({
+      position: "center right",
+      offset: [-2, 10],
+      effect: "fade",
+      opacity: 0.7
     });
   })
 </script>
