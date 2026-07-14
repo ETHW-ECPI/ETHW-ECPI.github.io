@@ -31,6 +31,14 @@
     </ul>
   </nav>
 
+  <!-- Modal Structure -->
+  <div id="modal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>This page is a work in progress.</h2>
+      <button class="close-btn" id="closeModal">Close</button>
+    </div>
+  </div>
+
   <main>
 
     <!-- Page Content -->
@@ -114,6 +122,9 @@
 
         <!-- Submit -->
         <input id="submit" type="submit" value="Send Message">
+        <div class="tooltip"> Hover over me
+          <span class="tooltiptext"> Click to send! </span>
+        </div>
 
       </form>
     </section>
@@ -130,14 +141,14 @@
   // Script to get the user's name
   // =============================
 
-  // Prompt the user for their name
-  var name = prompt("What is your name?");
+  //// Prompt the user for their name
+  //var name = prompt("What is your name?");
+  //// Greet the user
+  //alert("Welcome, " + name + "!");
+  //// Update the name element with the user's name
+  //document.getElementById("name").innerText = "Hello, " + name + "!";
 
-  // Greet the user
-  alert("Welcome, " + name + "!");
 
-  // Update the name element with the user's name
-  document.getElementById("name").innerText = "Hello, " + name + "!";
 
   // Script for choosing which div loads
   // =============================
@@ -164,13 +175,31 @@
   // Script for dark mode slider
   // =============================
   function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+    //var element = document.body;
+    //element.classList.toggle("dark-mode");
+
+
+    const body = document.body;
+    //const toggleBtn = document.getElementById('theme-toggle');
+    const THEME_KEY = 'theme'; // localStorage key
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+    }
+
+    // Save preference
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem(THEME_KEY, 'dark');
+    } else {
+      localStorage.setItem(THEME_KEY, 'light');
+    }
+
   }
 
   // Script for notification
   // =============================
-
   // Delay in milliseconds before showing the notification
   const delay = 2000; // 2 seconds
 
@@ -211,7 +240,8 @@
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevents form submission
 
-    const submit = document.getElementById('submit');
+    const submit = document.getElementById("submit");
+    const name = document.getElementById("name");
 
     // Disables the submit button
     submit.disabled = true;
@@ -223,6 +253,25 @@
       alert("Thank you, " + name + ", your message has been sent!");
       e.target.reset();
     }, 2000); // 2 second delay
+
+    // Script for Modal
+    // =============================
+    // Show modal when page loads
+    window.onload = function () {
+      document.getElementById('modal').style.display = 'block';
+    };
+
+    // Close modal when button is clicked
+    document.getElementById('closeModal').addEventListener('click', function () {
+      document.getElementById('modal').style.display = 'none';
+    });
+
+    // Optional: Close modal when clicking outside the content box
+    document.getElementById('modal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
   })
 </script>
 

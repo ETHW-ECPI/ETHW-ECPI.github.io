@@ -162,6 +162,12 @@ button[type="submit"]:focus {
 @media (min-width: 768px) {}
 
 /* Dark Mode */
+body.dark-mode {
+   background-color: #333;
+   color: whitesmoke;
+}
+
+/*
 .dark-mode {
    background-color: #333;
    color: whitesmoke;
@@ -180,6 +186,7 @@ button[type="submit"]:focus {
 .dark-mode section>h2 {
    border-bottom: 5px solid white;
 }
+*/
 
 /* Toggle Switch */
 .switch {
@@ -196,4 +203,107 @@ button[type="submit"]:focus {
 .label-text {
    margin-left: 10px;
    font-size: 1rem;
+}
+
+/* The modal overlay */
+.modal-overlay {
+   display: none;
+   /* Hidden by default */
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   /* Transparent black */
+   z-index: 999;
+   /* On top of everything */
+}
+
+/* The modal content box */
+.modal-content {
+   background-color: #fff;
+   margin: 15% auto;
+   /* Center vertically */
+   padding: 20px;
+   border-radius: 8px;
+   width: 80%;
+   max-width: 400px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button styling */
+.close-btn {
+   background-color: #007BFF;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   margin-top: 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+.close-btn:hover {
+   background-color: #0056b3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* Tooltip container */
+tooltip {
+   position: relative;
+   display: inline-block;
+   border-bottom: 1px dotted black;
+   /* Optional: Dotted underline */
+}
+
+/* Tooltip text */
+tooltip .tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   background-color: #555;
+   color: #fff;
+   text-align: center;
+   padding: 5px 0;
+   border-radius: 6px;
+   position: absolute;
+   z-index: 1;
+   bottom: 125%;
+   /* Position above the text */
+   left: 50%;
+   margin-left: -60px;
+   opacity: 0;
+   transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+tooltip .tooltiptext::after {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+tooltip:hover .tooltiptext {
+   visibility: visible;
+   opacity: 1;
 }
