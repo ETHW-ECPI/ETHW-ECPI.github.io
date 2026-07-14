@@ -170,37 +170,37 @@
   // Script for dark mode
   // =============================
   (function () {
-    const main = document.querySelector("main");
-    //const body = document.body;
+    const body = document.body;
+    const section = document.querySelector("section");
+    const header = document.querySelector("header");
+    const footer = document.querySelector("header");
     const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
 
     // Load saved theme from localStorage
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
-      //body.classList.add('dark-mode');
-      main.classList.add('dark-mode');
-      //document.getElementById("pageContentSection").classList.add('dark-mode');
+      body.classList.add('dark-mode');
+      section.classList.add('dark-mode');
+      header.classList.add('dark-mode');
+      footer.classList.add('dark-mode');
     }
 
     // Changes theme on button click
     toggleBtn.addEventListener('click', () => {
-      //body.classList.toggle('dark-mode');
-      main.classList.toggle('dark-mode');
+      body.classList.toggle('dark-mode');
+      section.classList.toggle('dark-mode');
+      header.classList.toggle('dark-mode');
+      footer.classList.toggle('dark-mode');
 
       // Save preference
       localStorage.setItem(
         THEME_KEY,
-        //body.classList.contains('dark-mode') ? 'dark' : 'light'
-        main.classList.contains('dark-mode') ? 'dark' : 'light'
+        body.classList.contains('dark-mode') ? 'dark' : 'light',
+        section.classList.contains('dark-mode') ? 'dark' : 'light',
+        header.classList.contains('dark-mode') ? 'dark' : 'light',
+        footer.classList.contains('dark-mode') ? 'dark' : 'light'
       );
-
-      // Save preference
-      //if (body.classList.contains('dark-mode')) {
-      //  localStorage.setItem(THEME_KEY, 'dark');
-      //} else {
-      //  localStorage.setItem(THEME_KEY, 'light');
-      //}
     });
   })();
 
