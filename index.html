@@ -31,15 +31,15 @@
     </ul>
   </nav>
 
-  <!-- Modal Structure -->
-  <div id="modal" class="modal-overlay">
-    <div class="modal-content">
-      <h2>This page is a work in progress.</h2>
-      <button class="close-btn" id="closeModal">Close</button>
-    </div>
-  </div>
-
   <main>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>This page is a work in progress.</h2>
+        <button class="close-btn" id="closeModal">Close</button>
+      </div>
+    </div>
 
     <!-- Page Content -->
     <section>
@@ -122,8 +122,9 @@
 
         <!-- Submit -->
         <input id="submit" type="submit" value="Send Message">
-        <div class="tooltip"> Hover over me
-          <span class="tooltiptext"> Click to send! </span>
+        <!-- Tooltip element -->
+        <div class="tooltip">Hover over me
+          <span class="tooltiptext">Tooltip text</span>
         </div>
 
       </form>
@@ -131,7 +132,7 @@
 
   </main>
 
-  <button onclick="darkMode()">Toggle dark mode</button>
+  <button id="theme-toggle">Toggle dark mode</button>
 
   <footer id="footer">This is a bullet --> &#8226;</footer>
 </body>
@@ -147,8 +148,6 @@
   //alert("Welcome, " + name + "!");
   //// Update the name element with the user's name
   //document.getElementById("name").innerText = "Hello, " + name + "!";
-
-
 
   // Script for choosing which div loads
   // =============================
@@ -174,13 +173,13 @@
 
   // Script for dark mode slider
   // =============================
-  function darkMode() {
+  (function () {
     //var element = document.body;
     //element.classList.toggle("dark-mode");
 
 
     const body = document.body;
-    //const toggleBtn = document.getElementById('theme-toggle');
+    const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
 
     // Load saved theme from localStorage
@@ -189,14 +188,18 @@
       body.classList.add('dark-mode');
     }
 
-    // Save preference
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem(THEME_KEY, 'dark');
-    } else {
-      localStorage.setItem(THEME_KEY, 'light');
-    }
+    // Changes theme on button click
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
 
-  }
+      // Save preference
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem(THEME_KEY, 'dark');
+      } else {
+        localStorage.setItem(THEME_KEY, 'light');
+      }
+    });
+  })();
 
   // Script for notification
   // =============================
