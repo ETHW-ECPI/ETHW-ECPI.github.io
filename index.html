@@ -42,13 +42,13 @@
     </div>
 
     <!-- Page Content -->
-    <section id="pageContentSection">
+    <section>
       <h2 id="about">About</h2>
       <p>This is my webpage project for my school. It's pretty alright.</p>
       <ul id="aboutList"></ul>
     </section>
 
-    <section id="pageContentSection">
+    <section>
       <h2 id="featured">Featured Content</h2>
       <div id="university">University Resources</div> <!-- text links to your ECPI program home page -->
       <p>I actually don't know what exact links should go here</p>
@@ -57,7 +57,7 @@
       <!-- image links to any of your personal GitHub or web-based projects -->
     </section>
 
-    <section id="pageContentSection">
+    <section>
       <h2 id="projects">Projects</h2>
       <table>
         <caption>Sample Projects</caption>
@@ -100,7 +100,7 @@
       </table>
     </section>
 
-    <section id="pageContentSection">
+    <section>
       <h2 id="contact">Contact</h2>
       <form class="contact-form" id="contactForm" action="#" method="post">
 
@@ -121,13 +121,12 @@
         <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
 
         <!-- Submit -->
-        <input id="submit" type="submit" value="Send Message"><span class="tooltiptext">Tooltip text</span>
+        <!--<input id="submit" type="submit" value="Send Message">-->
 
-        <!-- Tooltip element -->
-        <!--
-        <div class="tooltip">Hover over me
-          <span class="tooltiptext">Tooltip text</span>
-        </div>-->
+        <div class="tooltip">
+          <span>Tooltip text</span>
+          <input id="submit" type="submit" value="Send Message">
+        </div>
 
       </form>
     </section>
@@ -179,7 +178,7 @@
     //var element = document.body;
     //element.classList.toggle("dark-mode");
 
-    const body = document.body;
+    const body = document.body.querySelectorAll("main");
     const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
 
@@ -187,7 +186,8 @@
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
-      document.getElementById("pageContentSection").classList.add('dark-mode');
+      body.classList.add('dark-mode');
+      //document.getElementById("pageContentSection").classList.add('dark-mode');
     }
 
     // Changes theme on button click
