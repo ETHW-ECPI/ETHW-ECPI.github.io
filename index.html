@@ -170,7 +170,7 @@
   // Script for dark mode
   // =============================
   (function () {
-    const body = document.querySelector("main");
+    const main = document.querySelector("main");
     //const body = document.body;
     const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
@@ -178,20 +178,29 @@
     // Load saved theme from localStorage
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
-      body.classList.add('dark-mode');
+      //body.classList.add('dark-mode');
+      main.classList.add('dark-mode');
       //document.getElementById("pageContentSection").classList.add('dark-mode');
     }
 
     // Changes theme on button click
     toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
+      //body.classList.toggle('dark-mode');
+      main.classList.toggle('dark-mode');
 
       // Save preference
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem(THEME_KEY, 'dark');
-      } else {
-        localStorage.setItem(THEME_KEY, 'light');
-      }
+      localStorage.setItem(
+        THEME_KEY,
+        //body.classList.contains('dark-mode') ? 'dark' : 'light'
+        main.classList.contains('dark-mode') ? 'dark' : 'light'
+      );
+
+      // Save preference
+      //if (body.classList.contains('dark-mode')) {
+      //  localStorage.setItem(THEME_KEY, 'dark');
+      //} else {
+      //  localStorage.setItem(THEME_KEY, 'light');
+      //}
     });
   })();
 
