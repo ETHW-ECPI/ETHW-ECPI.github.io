@@ -42,13 +42,13 @@
     </div>
 
     <!-- Page Content -->
-    <section>
+    <section id="pageContentSection">
       <h2 id="about">About</h2>
       <p>This is my webpage project for my school. It's pretty alright.</p>
       <ul id="aboutList"></ul>
     </section>
 
-    <section>
+    <section id="pageContentSection">
       <h2 id="featured">Featured Content</h2>
       <div id="university">University Resources</div> <!-- text links to your ECPI program home page -->
       <p>I actually don't know what exact links should go here</p>
@@ -57,7 +57,7 @@
       <!-- image links to any of your personal GitHub or web-based projects -->
     </section>
 
-    <section>
+    <section id="pageContentSection">
       <h2 id="projects">Projects</h2>
       <table>
         <caption>Sample Projects</caption>
@@ -100,9 +100,9 @@
       </table>
     </section>
 
-    <section>
+    <section id="pageContentSection">
       <h2 id="contact">Contact</h2>
-      <form class="contact-form" id="contact-form" action="#" method="post">
+      <form class="contact-form" id="contactForm" action="#" method="post">
 
         <!-- Name -->
         <label for="name">Your Name:</label>
@@ -121,11 +121,13 @@
         <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
 
         <!-- Submit -->
-        <input id="submit" type="submit" value="Send Message">
+        <input id="submit" type="submit" value="Send Message"><span class="tooltiptext">Tooltip text</span>
+
         <!-- Tooltip element -->
+        <!--
         <div class="tooltip">Hover over me
           <span class="tooltiptext">Tooltip text</span>
-        </div>
+        </div>-->
 
       </form>
     </section>
@@ -171,12 +173,11 @@
     skillsList.appendChild(listItem);
   });
 
-  // Script for dark mode slider
+  // Script for dark mode
   // =============================
   (function () {
     //var element = document.body;
     //element.classList.toggle("dark-mode");
-
 
     const body = document.body;
     const toggleBtn = document.getElementById('theme-toggle');
@@ -186,6 +187,7 @@
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
+      document.getElementById("pageContentSection").classList.add('dark-mode');
     }
 
     // Changes theme on button click
