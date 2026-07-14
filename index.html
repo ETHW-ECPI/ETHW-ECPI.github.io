@@ -170,10 +170,8 @@
   // Script for dark mode
   // =============================
   (function () {
-    //var element = document.body;
-    //element.classList.toggle("dark-mode");
-
-    const body = document.body.querySelectorAll("main");
+    //const body = document.body.querySelectorAll("main");
+    const body = document.body;
     const toggleBtn = document.getElementById('theme-toggle');
     const THEME_KEY = 'theme'; // localStorage key
 
@@ -232,7 +230,7 @@
   titleElement.textContent = "Welcome to my Amazing Project";
 
   const footerElement = document.getElementById("footer");
-  footerElement.textContent = "This is a totally different bullet --> &#8226;";
+  footerElement.textContent = "My bullet don't work anymore for some reason --> &#8226;";
 
   // Script for form submit button
   // =============================
