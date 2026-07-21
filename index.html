@@ -147,12 +147,6 @@
   //// Update the name element with the user's name
   //document.getElementById("name").innerText = "Hello, " + name + "!";
 
-  // Script for choosing which div loads
-  // =============================
-  if (projects > 3) {
-    document.getElementById('university').style.display = 'none'
-  }
-
   // Script for about section
   // =============================
 
@@ -379,6 +373,12 @@
     const projectData = initializeProjects();
     renderProjects(projectData);
   });
+
+  // Script for choosing which div loads
+  // =============================
+  if (projects > 3) {
+    document.getElementById('university').style.display = 'none'
+  }
 </script>
 
 </html>
