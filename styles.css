@@ -94,25 +94,6 @@ section:hover {
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Projects Table */
-table {
-   width: 100%;
-   border-collapse: collapse;
-}
-
-th,
-td {
-   border: 2px solid slategray;
-   padding: 10px;
-   text-align: left;
-}
-
-th {
-   background-color: rgb(228, 228, 228);
-   font-weight: bold;
-   margin: auto;
-}
-
 /* Contact Form */
 .contact-form {
    display: flex;
@@ -251,4 +232,11 @@ body.dark-mode #footer {
    color: whitesmoke;
    text-align: left;
    font-size: 12px;
+}
+
+/* Project Images */
+img {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
 }
