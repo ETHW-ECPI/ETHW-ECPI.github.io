@@ -291,6 +291,94 @@
     effect: "fade",
     opacity: 0.7
   });
+  // Project Obects
+  // =============================
+  // Defining project objects
+  const projects = [
+    {
+      title: "Webpage",
+      summary: "A webpage that is somewhat of a basic portfolio.",
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg",
+      repoLink: "https://github.com/ETHW-ECPI/ETHW-ECPI.github.io"
+    },
+    {
+      title: "Rolodex",
+      summary: "A simple rolodex made with Java.",
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg",
+      repoLink: "https://github.com/ETHW-ECPI/Ethan-Weis-SDC330L-Rolodex-Project"
+    },
+    {
+      title: "Notebook",
+      summary: "A very simple notebook that can be typed in.",
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/048/910/778/non_2x/default-image-missing-placeholder-free-vector.jpg",
+      repoLink: "https://github.com/ETHW-ECPI/Ethan_Weis_SDC330_Notebook_Project"
+    }
+  ];
+
+  // Store & Retrieving from sessionStorage
+  function initializeProjects() {
+    const storedProjects = sessionStorage.getItem("projects");
+
+    if (!storedProjects) {
+      // No data in sessionStorage → store initial array
+      sessionStorage.setItem("projects", JSON.stringify(projects));
+      return projects;
+    } else {
+      // Data exists → parse and return
+      try {
+        return JSON.parse(storedProjects);
+      } catch (error) {
+        console.error("Error parsing stored projects:", error);
+        return [];
+      }
+    }
+  }
+
+  // Rendering projects dynamically
+  function renderProjects(projectArray) {
+    //const container = document.getElementById("projects-container");
+    const container = document.getElementById("projects");
+    container.innerHTML = ""; // Clear existing content
+
+    projectArray.forEach(project => {
+      // Create project wrapper
+      const projectDiv = document.createElement("div");
+      projectDiv.className = "project";
+
+      // Title
+      const title = document.createElement("h3");
+      title.textContent = project.title;
+
+      // Summary
+      const summary = document.createElement("p");
+      summary.textContent = project.summary;
+
+      // Image
+      const img = document.createElement("img");
+      img.src = project.imageUrl;
+      img.alt = project.title;
+
+      // Link
+      const link = document.createElement("a");
+      link.href = project.repoLink;
+      link.textContent = "View Repository";
+      link.target = "_blank";
+
+      // Append elements
+      projectDiv.appendChild(img);
+      projectDiv.appendChild(title);
+      projectDiv.appendChild(summary);
+      projectDiv.appendChild(link);
+
+      container.appendChild(projectDiv);
+    });
+  }
+
+  // Initializes on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    const projectData = initializeProjects();
+    renderProjects(projectData);
+  });
 </script>
 
 </html>
