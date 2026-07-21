@@ -61,6 +61,7 @@
 
     <section>
       <h2 id="projects">Projects</h2>
+      <p id="projects-container"></p>
     </section>
 
     <section>
@@ -282,8 +283,7 @@
 
   // Rendering projects dynamically
   function renderProjects(projectArray) {
-    //const container = document.getElementById("projects-container");
-    const container = document.getElementById("projects");
+    const container = document.getElementById("projects-container");
     container.innerHTML = ""; // Clear existing content
 
     projectArray.forEach(project => {
