@@ -18,8 +18,8 @@ This is a project for my Web Design Class and JavaScript Class.
 The website can be opened by running it on GitHub's Pages in the Deployments.
 
 ## Features
-- Basic Selection Menu (Doesn't actually function)
-- A table to show off "projects".
+- Basic Selection Menu
+- A table to show off projects.
   
 ## Contributing
 Contributions are not really needed.
