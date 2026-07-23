@@ -144,13 +144,13 @@ button[type="submit"]:focus {
 
 /* Dark Mode */
 body.dark-mode,
-body.dark-mode #section {
+body.dark-mode section {
    background-color: #333;
    color: whitesmoke;
 }
 
-body.dark-mode #header,
-body.dark-mode #footer {
+body.dark-mode header,
+body.dark-mode footer {
    background-color: whitesmoke;
    color: #333;
 }
