@@ -144,7 +144,8 @@ button[type="submit"]:focus {
 
 /* Dark Mode */
 body.dark-mode,
-body.dark-mode section {
+body.dark-mode section,
+body.dark-mode nav {
    background-color: #333;
    color: whitesmoke;
 }
